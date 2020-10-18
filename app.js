@@ -4,7 +4,7 @@
  * @Author: Damo
  * @Date: 2020-10-14 10:42:39
  * @LastEditors: Damo
- * @LastEditTime: 2020-10-18 16:36:37
+ * @LastEditTime: 2020-10-18 16:57:55
  */
 const puppeteer = require('puppeteer');
 (async () => {
@@ -15,7 +15,7 @@ const puppeteer = require('puppeteer');
     defaultViewport: {
       width: 1920, //设置视窗的宽高
       height: 800
-    },
+    }
   });
 
   //打开新的标签页
@@ -26,7 +26,7 @@ const puppeteer = require('puppeteer');
     height: 800
   });
   //将打开的标签页跳转到百度首页。
-  await page.goto('https://baidu.com');
+  await page.goto('https://www.baidu.com');
   //在百度搜索输入框中输入 "前端神器" 关键字
   //page.type在dom元素中输入字符串，delay: 100,输入每个字符间隔100毫秒
   await page.type('#kw', '前端神器', {
